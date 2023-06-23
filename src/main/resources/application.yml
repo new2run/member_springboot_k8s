@@ -1,0 +1,41 @@
+server:
+  port: 8081
+
+# database 연동 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    각자 PC에 만들어놓은 Database이름을 써야 합니다.
+    url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    #    mysql에 생성한 사용자 계정 정보를 써야 합니다.
+    username: user_codingrecipe
+    password: 1234
+  thymeleaf:
+    cache: false
+
+  # spring data jpa 설정
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    open-in-view: false
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+
+<<<<<<< HEAD
+=======
+#  jpa:
+#    show_sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+>>>>>>> 503cae39b633d5d38c504d93656fc4e5607f3e76
+  jpa:
+    hibernate:
+      ddl-auto: update  # option type: create, create-drop, update, validate, none
+    properties:
+      hibernate:
+        diarect: org.hibernate.dialect.H2Dialect  # 쿼리의 기준이 되는 데이터베이스 엔진을 설정합니다.
+        show_sql: true  # sql 쿼리를 보여줍니다.
+        format_sql: true  # sql query formatting
+        use_sql_comments: true  # sql 쿼리의 추가정보를 보여줍니다.
