@@ -21,15 +21,13 @@ spring:
 #    hibernate:
 #      ddl-auto: update
 
-<<<<<<< HEAD
-=======
+
 #  jpa:
 #    show_sql: true
 #    properties:
 #      hibernate:
 #        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
->>>>>>> 503cae39b633d5d38c504d93656fc4e5607f3e76
   jpa:
     hibernate:
       ddl-auto: update  # option type: create, create-drop, update, validate, none
