@@ -42,10 +42,13 @@ pipeline {
                                             makeEmptyDirs: false, 
                                             noDefaultExcludes: false, 
                                             patternSeparator: '[, ]+', 
-                                            remoteDirectory: '/SpringBootDemo/deploy', 
+                                            //SSH 서버의 디폴트 경로가 /home/springbootdemo로 등록되어 있으므로,
+                                            //배포 경로는 /home/springbootdemo/SpringBootDemo/deploy 가 됨
+                                            remoteDirectory: '/SpringBootDemo/deploy',
                                             remoteDirectorySDF: false, 
                                             removePrefix: 'build/libs', 
-                                            sourceFiles: 'build/libs/*.jar')], 
+                                            //젠킨스 VM의 기본경로 /var/lib/jenkins/workspace/<파이프라인명>/build/libs 경로에 생성된 jar 파일을 WAS로 배포함
+                                            sourceFiles: 'build/libs/*.jar')],
                                             usePromotionTimestamp: false, 
                                             useWorkspaceInPromotion: false, 
                                             verbose: true
