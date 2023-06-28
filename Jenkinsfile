@@ -36,7 +36,7 @@ pipeline {
                                         sshTransfer(
                                             cleanRemote: false, 
                                             excludes: '', 
-                                            execCommand: 'echo \'ssh complete\'', 
+                                            execCommand: 'sh start_service.sh', 
                                             execTimeout: 120000, 
                                             flatten: false, 
                                             makeEmptyDirs: false, 
@@ -52,6 +52,11 @@ pipeline {
                             )
                         ]
                 )
+            }
+            steps{
+                sh '''
+                    echo '**********Publish complete**********'
+                '''
             }
         }
     }
