@@ -42,7 +42,7 @@ pipeline {
                                             makeEmptyDirs: false, 
                                             noDefaultExcludes: false, 
                                             patternSeparator: '[, ]+', 
-                                            remoteDirectory: '/home/springbootdemo', 
+                                            remoteDirectory: '/SpringBootDemo/deploy', 
                                             remoteDirectorySDF: false, 
                                             removePrefix: 'build/libs', 
                                             sourceFiles: 'build/libs/*.jar')], 
