@@ -12,7 +12,6 @@ pipeline {
             }
             catch (exc) {
                 echo 'git clone fail !!'
-                throw
             }
         }
 
