@@ -52,11 +52,7 @@ pipeline {
                             )
                         ]
                 )
-            }
-            steps{
-                sh '''
-                    echo '**********Publish complete**********'
-                '''
+                echo '********** Publish complete**********'
             }
         }
     }
