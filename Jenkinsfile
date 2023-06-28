@@ -36,7 +36,7 @@ pipeline {
                                         sshTransfer(
                                             cleanRemote: false, 
                                             excludes: '', 
-                                            execCommand: 'sh start_service.sh', 
+                                            execCommand: 'sh /home/springbootdemo/SpringBootDemo/deploy/start_service.sh', 
                                             execTimeout: 120000, 
                                             flatten: false, 
                                             makeEmptyDirs: false, 
