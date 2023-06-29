@@ -62,12 +62,7 @@ pipeline {
         stage('SonarQube - Code Analysis'){
             steps {
                 withSonarQubeEnv('SonarServer') {
-                    sh '''
-                        ./gradlew sonar \
-                          -Dsonar.projectKey=jenkins-sonarqube \
-                          -Dsonar.host.url=http://192.168.216.200:9000 \
-                          -Dsonar.login=sonar_token
-                    '''
+                    sh './gradlew sonar'
                     echo 'Code Analysis Success'
                 }
             }
