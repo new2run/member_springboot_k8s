@@ -58,5 +58,14 @@ pipeline {
                 echo '********** Publish complete**********'
             }
         }
+        //SonarQube 소스 검사
+        stage('SonarQube - Code Analysis'){
+            steps {
+                withSonarQubeEnv('SonarServer') {
+                    sh './gradlew sonar'
+                    echo 'Code Analysis Success'
+                }
+            }
+        }
     }
 }
